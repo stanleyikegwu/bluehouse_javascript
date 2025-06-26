@@ -6,5 +6,6 @@ body{
 
 h1{
 	text-decoration: blink;
-	color: burlywood;
+	color: black;
+	text-size-adjust: 20px;
 }
