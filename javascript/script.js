@@ -3,7 +3,7 @@ var user = {
   password: "beatmyass"
     email:"stagasstanley@gmail.com"
 }
-
+cd
 var user = {
   username: "john",
   password: "superSecret123"
