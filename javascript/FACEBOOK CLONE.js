@@ -1,48 +1,39 @@
 var database = [
-	{
-		username:"victor",
-		password:"23uiuef"
-	}
+    { username: "victor", password: "23uiuef" },
+    { username: "david", password: "abc123" },
+    { username: "onyx", password: "password1" },
+    { username: "victoria", password: "baddie456" },
+    { username: "emma", password: "dubai123" }
 ];
+
 
 var newsfeed = [
-	{
-		username:"david",
-		timeline:"life in dubai"
-	},
-
-	{
-		username:"onyx",
-		timeline:"have not seen my dad for a long time"
-	},
-
-	{
-		username:"victoria",
-		timeline:"the real baddie"
-	},
+    { username: "david", timeline: "life in dubai" },
+    { username: "onyx", timeline: "have not seen my dad for a long time" },
+    { username: "victoria", timeline: "the real baddie" }
 ];
-
 
 
 var usernamePrompt = prompt("username?");
 var passwordPrompt = prompt("password?");
 
-function SignIn (username,password){
 
-   if (username===database[0].username && 
-   	   password===database[0].password){
-      console.log(newsfeed);
-     }
-      else{
-   	alert("wrong deteils");
-  }
-  };
+function SignIn(username, password) {
+    var userFound = false;
 
-SignIn(usernamePrompt,passwordPrompt);
+    for (var i = 0; i < database.length; i++) {
+        if (username === database[i].username && password === database[i].password) {
+            userFound = true;
+            break;
+        }
+    }
 
+    if (userFound) {
+        console.log("Login successful!");
+        console.log(newsfeed);
+    } else {
+        alert("Wrong details");
+    }
+}
 
-
-
-
-
-
+SignIn(usernamePrompt, passwordPrompt);
