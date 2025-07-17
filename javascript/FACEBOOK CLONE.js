@@ -1,4 +1,4 @@
-var database = [
+davar database = [
     { username: "victor", password: "23uiuef" },
     { username: "david", password: "abc123" },
     { username: "onyx", password: "password1" },
@@ -29,7 +29,6 @@ function SignIn(username, password) {
     }
 
     if (userFound) {
-        console.log("Login successful!");
         console.log(newsfeed);
     } else {
         alert("Wrong details");
